@@ -12,14 +12,21 @@ export default class App extends Component {
   }
 
   render() {
-
+    console.log(this.state.todoToAdd)
     return (
       <View style={styles.container}>
       <View style={styles.header}>
         <Text style={styles.headerText}>Doss's Dope ToDos</Text>
       </View>
       <View style={styles.inputContainer}>
-        <TextInput placeholder="add todo here" style={{color: 'red', textDecorationLine: 'underline'}}></TextInput>
+        <TextInput 
+          placeholder="add todo here" 
+          style={
+            {color: 'red', 
+            textDecorationLine: 'underline'
+            }}
+          onChangeText={(text) => this.setState({todoToAdd: text})}
+          value={this.state.text}></TextInput>
         <Button title="add to list" color='blue'></Button>
       </View>
       <View style={styles.listContainer}>
