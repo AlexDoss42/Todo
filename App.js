@@ -7,7 +7,7 @@ export default class App extends Component {
 
     this.state = {
       todoToAdd: '',
-      todosList: ["get this bread", 'obtain this grain', 'yeet this wheat']
+      todosList: [{key: "get this bread"}, {key: 'obtain this grain'}, {key: 'yeet this wheat'}]
     }
   }
 
@@ -32,7 +32,7 @@ export default class App extends Component {
       <View style={styles.listContainer}>
         <FlatList 
         data={this.state.todosList}
-        renderItem={({item}) => <Text style={styles.todo}>{item}</Text>}>
+        renderItem={({item}) => <Text style={styles.todo}>{item.key}</Text>}>
         </FlatList>
       </View>
     </View>
