@@ -12,7 +12,7 @@ export default class App extends Component {
   }
 
   render() {
-    console.log(this.state.todoToAdd)
+
     return (
       <View style={styles.container}>
       <View style={styles.header}>
@@ -20,14 +20,21 @@ export default class App extends Component {
       </View>
       <View style={styles.inputContainer}>
         <TextInput 
-          placeholder="add todo here" 
+          placeholder="add to do item here" 
           style={
             {color: 'red', 
             textDecorationLine: 'underline'
             }}
           onChangeText={(text) => this.setState({todoToAdd: text})}
           value={this.state.text}></TextInput>
-        <Button title="add to list" color='blue'></Button>
+        <Button 
+          title="add to list" 
+          color='blue'
+          onPress={() => {
+            console.log("todolist", this.state.todosList)
+            console.log("todotoAdd", this.state.todoToAdd)
+            this.setState({todosList: [...this.state.todosList, {key: this.state.todoToAdd}]});
+          }}></Button>
       </View>
       <View style={styles.listContainer}>
         <FlatList 
@@ -59,12 +66,12 @@ const styles = StyleSheet.create({
   },
   inputContainer: {
     flex: 1,
-    width: "100%",
+    width: "90%",
     backgroundColor: "white"
   },
   listContainer: {
     flex: 8,
-    width: "100%",
+    width: "90%",
     backgroundColor: 'red'  
   },
   todo: {
