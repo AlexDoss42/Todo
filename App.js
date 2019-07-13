@@ -30,10 +30,10 @@ export default class App extends Component {
         <Button 
           title="add to list" 
           color='blue'
-          onPress={() => {
-            console.log("todolist", this.state.todosList)
-            console.log("todotoAdd", this.state.todoToAdd)
-            this.setState({todosList: [...this.state.todosList, {key: this.state.todoToAdd}]});
+          onPress={async () => {
+            await this.setState({todosList: [...this.state.todosList, {key: this.state.todoToAdd}]});
+            await this.setState({todoToAdd: ''})
+            await console.log("todoToAdd after it is added: ", this.state.todoToAdd)
           }}></Button>
       </View>
       <View style={styles.listContainer}>
