@@ -20,10 +20,16 @@ export default class App extends Component {
 
     return (
       <View style={styles.container}>
-        <MyHeader/>
-        <MyTextInput/>
-        <SubmitButton/>
-        <List/>
+        <MyHeader style={styles.header}/>
+        <View style={styles.addTodoContainer}>
+          <MyTextInput
+            props = {
+            todoToAdd = this.state.todoToAdd
+            }
+          />
+          <SubmitButton/>
+        </View>
+        <List style={styles.list}/>
     </View>
     );
   }
@@ -36,4 +42,11 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
   },
+  addTodoContainer: {
+    flex: 1,
+    backgroundColor: 'white'
+  },
+  list: {
+    flex: 7
+  }
 });

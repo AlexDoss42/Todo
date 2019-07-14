@@ -1,14 +1,10 @@
 import React, { Component } from 'react';
-import { Button, FlatList, StyleSheet, Text, TextInput, View } from 'react-native';
+import { StyleSheet, TextInput, View } from 'react-native';
 
 export default class MyTextInput extends Component {
-  constructor() {
-    super()
+  constructor(props) {
+    super(props)
 
-    this.state = {
-      todoToAdd: '',
-      todosList: [{key: "get this bread"}, {key: 'obtain this grain'}, {key: 'yeet this wheat'}]
-    }
   }
 
   render() {
@@ -22,7 +18,7 @@ export default class MyTextInput extends Component {
             textDecorationLine: 'underline'
             }}
           onChangeText={(text) => this.setState({todoToAdd: text})}
-          value={this.state.text}></TextInput>
+          value={this.props.todoToAdd}></TextInput>
       </View>
     );
   }

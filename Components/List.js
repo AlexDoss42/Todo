@@ -14,14 +14,12 @@ export default class List extends Component {
   render() {
 
     return (
-        <View style={styles.container}>
             <View style={styles.listContainer}>
                 <FlatList 
                     data={this.state.todosList}
                     renderItem={({item}) => <Text style={styles.todo}>{item.key}</Text>}>
                 </FlatList>
             </View>
-        </View>
     );
   }
 }
@@ -30,10 +28,9 @@ const styles = StyleSheet.create({
   listContainer: {
     flex: 8,
     width: "90%",
-    backgroundColor: 'red'  
   },
   todo: {
-    color: 'black',
+    color: 'white',
     fontSize: 24
   }
 });
