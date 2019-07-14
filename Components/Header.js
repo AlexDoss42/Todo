@@ -1,12 +1,7 @@
 import React, { Component } from 'react';
-import { StyleSheet, View } from 'react-native';
+import { StyleSheet, Text, View } from 'react-native';
 
-import List from './Components/List'
-import MyTextInput from './Components/TextInput'
-import SubmitButton from './Components/SubmitButton'
-import MyHeader from './Components/Header'
-
-export default class App extends Component {
+export default class Header extends Component {
   constructor() {
     super()
 
@@ -19,11 +14,10 @@ export default class App extends Component {
   render() {
 
     return (
-      <View style={styles.container}>
-        <MyHeader/>
-        <MyTextInput/>
-        <SubmitButton/>
-        <List/>
+    <View style={styles.container}>
+      <View style={styles.header}>
+        <Text style={styles.headerText}>Doss's Dope ToDos</Text>
+      </View>
     </View>
     );
   }
@@ -36,4 +30,14 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
   },
+  header: {
+    flex: 1,
+    marginTop: 50
+  },
+  headerText: {
+    color: 'blue',
+    fontSize: 32,
+    textTransform: 'uppercase',
+    fontWeight: 'bold'
+  }
 });
