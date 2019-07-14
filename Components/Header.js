@@ -16,8 +16,7 @@ export default class MyHeader extends Component {
 const styles = StyleSheet.create({
   header: {
     flex: 1,
-    marginTop: 50,
-    backgroundColor: 'red'
+    marginTop: 50
   },
   headerText: {
     color: 'blue',

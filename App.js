@@ -29,7 +29,7 @@ export default class App extends Component {
           />
           <SubmitButton/>
         </View>
-        <List style={styles.list}/>
+        <List/>
     </View>
     );
   }
@@ -44,9 +44,8 @@ const styles = StyleSheet.create({
   },
   addTodoContainer: {
     flex: 1,
-    backgroundColor: 'white'
-  },
-  list: {
-    flex: 7
+    alignItems: 'center',
+    justifyContent: 'center',
+    width: "90%"
   }
 });

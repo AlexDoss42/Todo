@@ -6,8 +6,7 @@ export default class List extends Component {
     super()
 
     this.state = {
-      todoToAdd: '',
-      todosList: [{key: "get this bread"}, {key: 'obtain this grain'}, {key: 'yeet this wheat'}]
+      todosList: [{key: "Get this bread"}, {key: 'Obtain this grain'}, {key: 'Yeet this wheat'}]
     }
   }
 

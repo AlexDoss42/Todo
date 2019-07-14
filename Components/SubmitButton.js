@@ -6,7 +6,7 @@ export default class SubmitButton extends Component {
   render() {
 
     return (
-      <View style={styles.container}>
+      <View style={styles.buttonContainer}>
         <Button 
           title="add to list" 
           color='blue'
@@ -21,10 +21,8 @@ export default class SubmitButton extends Component {
 }
 
 const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#000',
-    alignItems: 'center',
-    justifyContent: 'center',
+  buttonContainer: {
+    width: "33%",
+    marginVertical: 5
   }
 });

@@ -12,10 +12,11 @@ export default class MyTextInput extends Component {
     return (
       <View style={styles.inputContainer}>
         <TextInput 
-          placeholder="add to do item here" 
+          placeholder="Add to do item here" 
           style={
-            {color: 'red', 
-            textDecorationLine: 'underline'
+            {color: 'white', 
+             borderBottomColor: 'white',
+             borderBottomWidth: 1
             }}
           onChangeText={(text) => this.setState({todoToAdd: text})}
           value={this.props.todoToAdd}></TextInput>
@@ -27,7 +28,7 @@ export default class MyTextInput extends Component {
 const styles = StyleSheet.create({
   inputContainer: {
     flex: 1,
-    width: "90%",
-    backgroundColor: "white"
+    width: '100%',
+    backgroundColor: "black"
   }
 });
